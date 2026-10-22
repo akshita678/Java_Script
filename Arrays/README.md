@@ -10,7 +10,8 @@ Everything is kept inside a single, straightforward folder to keep testing simpl
 
 ```text
 └── array/                  # Single folder for all JavaScript array practice
-    ├── 01_basics.js        # Testing array structure,syntax, mutability,properties ,iteration
+    ├── 01_basics.js       # Testing array structure,syntax, mutability,properties ,iteration
+          ├──01 practice questions # item discount calculation, average marks in marks array     
     ├── 02_callback_loops.js# Getting confident with .forEach(), .map(), .filter()
     ├── 03_reductions.js    # Understanding the .reduce() method
     └── [New Scripts]       # New playground files are added directly here
