@@ -5,7 +5,7 @@ function abx(n,t){
         
     }
     
-    // bug console.log(n*t); // Error --> NAn --> not  anumber in js we cant multiply a string with number and expect it ot repeate
+    // bug console.log(n*t); // Error --> NAn --> not  anumber in js we cant multiply a string with number and expect it to repeat
 }
 let n =prompt("enter msg to be displayed");
 let t =parseInt(prompt("enter number of times msg needs  to be displayed"));
