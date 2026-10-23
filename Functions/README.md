@@ -37,8 +37,8 @@ for (let i = 0; i < t; i++) {
 
 - [x] **Basics:** Function declarations, arguments, and return values.
 - [x] **Control Flow:** Integrating loops and conditionals inside functions *(e.g., Message Repeater)*.
-- [ ] **Scope & Closures:** Understanding local vs. global execution contexts.
-- [ ] **Arrow Functions:** Syntax minimization and lexical `this` behavior.
+- [x] **Scope & Closures:** Understanding local vs. global execution contexts.
+- [x] **Arrow Functions:** Syntax minimization and conversion of traditional function to arrow function.
 - [ ] **Array Methods:** Working with higher-order functions like `.map()`, `.filter()`, and `.reduce()`.
 
 ---
