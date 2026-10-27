@@ -1,0 +1,46 @@
+body{
+    background-color: teal;
+    text-align: center;
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+height: 70vh;    /* this means that 70% of visible height will be given to conatiner*/
+ 
+    display: flex;  /* this means that all boxes will be in str line*/
+    flex-wrap: wrap;/* this means that if theres no space then go in next line*/
+justify-content: center;
+align-items: center; 
+}
+.game{
+    height:60vh;
+    width: 60vh;
+    
+    display: flex;  /* this means that all boxes will be in str line*/
+    flex-wrap: wrap;/* this means that if theres no space then go in next line*/
+justify-content: center;
+align-items: center;  /* this means that all boxes will come in centre of game div*/
+gap: 1vh;}
+
+    
+
+.box{
+    height:18vmin;
+    width:18vmin;   /* this means vh 's 1% */
+border-radius: 1rem;
+border:none;
+font-size:9vmin ;
+color: red;
+background-color: palegoldenrod;}
+
+#reset{
+    background-color:black;
+    color:white;
+    height: 10vmin;
+    width:20vmin;
+    border-radius: 1rem;
+    border: none;
+}
