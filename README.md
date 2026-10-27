@@ -14,11 +14,14 @@ The code is organized categorically into fundamental JavaScript concepts to keep
     *   `grade-calculator.js` 📊 — Simple prompt-based scoring script.
 *   **`02-loops/`** — Iterative loops (`for`, `while`, `do-while`).
 *   **`03-functions/`** — Reusable logic and modular code blocks.
-  
-*   **`04-DOM Selection-Mthods/`** — DOM manipulation and browser events.
+*   **`04-DOM-Selection-Methods/`** — DOM manipulation and browser events.
     *   `index.html` 🌐 — Simple interface structure.
     *   `style.css` 🎨 — Main stylesheet.
     *   `node.js` ⚡ — JS logic script.
+*   **`05-tic-tac-toe-game/`** — Multi-dimensional arrays, matrix matching, and state handling. 🎮
+    *   `index.html` 🌐 — Grid structure for the game board.
+    *   `style.css` 🎨 — Layout styling for game boxes.
+    *   `app.js` ⚡ — Core winning logic and click handling loop.
 
 ---
 
@@ -63,12 +66,52 @@ themeToggleBtn.addEventListener("click", () => {
 });
 ```
 
+### 🎮 Program 3: Tic-Tac-Toe Logic Engine
+A full DOM-based game implementation. It manages two-player toggling (`X` vs `O`), locks button interaction states, and runs a pattern-matching algorithm over multi-dimensional arrays to evaluate game-winning rows instantly.
+
+```javascript
+let boxes = document.querySelectorAll(".box");
+let reset = document.querySelector("#reset");
+let player0 = true;
+
+const win = [, [0,3,6], [0,4,8], , [2,5,8], [2,4,6], , [6,7,8]
+];
+
+boxes.forEach((box) => {
+    box.addEventListener("click", () => {
+        if (player0 === true) {
+            box.innerText = "O";
+            player0 = false;
+        } else {
+            box.innerText = "X";
+            player0 = true;
+        }
+        box.disabled = true; 
+        checkwinner();
+    });
+});
+
+const checkwinner = () => {
+    for(let pattern of win) {
+        let pos1 = boxes[pattern[0]].innerText;
+        let pos2 = boxes[pattern[1]].innerText;
+        let pos3 = boxes[pattern[2]].innerText;
+        
+        if(pos1 != "" && pos2 != "" && pos3 != "") {
+           if(pos1 === pos2 && pos2 === pos3) {
+              console.log("winner", pos1);
+           }
+        }
+    }
+};
+```
+
 ---
 
 ## 🧠 Key Skills & Concepts Implemented
 *   **Data Capture:** Interacting with users directly using browser controls like `prompt()`.
-*   **Flow Control:** Designing logic pathways with conditional structures.
-*   **DOM & Event Handling:** Intercepting browser actions (clicks) to manipulate HTML styles in real-time.
+*   **Flow Control & Pattern Checking:** Designing multidimensional loops to evaluate state configurations against preset win criteria.
+*   **DOM & Event Handling:** Intercepting browser actions (clicks) to update UI values and freeze control attributes (`disabled = true`) dynamically.
 *   **Git Version Control:** Committing code consistently to map real-time technical growth.
 
 ---
@@ -81,10 +124,10 @@ themeToggleBtn.addEventListener("click", () => {
 3. Navigate to the **Console** tab.
 4. Copy and paste the script code directly into the window and hit **Enter**.
 
-### For UI/DOM Projects (Like the Theme Toggle):
+### For UI/DOM Projects (Like the Theme Toggle or Tic-Tac-Toe):
 1. Download or clone the folder locally.
 2. Double-click the `index.html` file to launch it directly in your web browser.
-3. Click the target interface button to test the dynamic transitions.
+3. Click the target interface buttons to run the interactive features.
 
 ---
 🌱 *Every massive codebase started with a single file. Documenting my software engineering evolution one commit at a time.*
