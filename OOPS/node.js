@@ -50,3 +50,61 @@ let audi = new car("audi");
 audi.start();      // Output: audi start
 audi.printBrand(); // Output: audi
 
+
+
+// Inheritance In js 
+//passing down methods or properties from parent to child 
+class parent{
+  hello=()=>{
+    console.log("hi there ")
+  }
+}
+// extends function is used for inheritance 
+class child extends parent{
+
+}
+
+let obj=new child; // created a new object using new function 
+obj.hello() // no error it simply prints hi there 
+
+
+// another better example 
+class person{
+  constructor(age){
+   this.species="human"
+   this.age=age
+  }
+  eat=()=>{
+    console.log("eat")
+  }
+   sleep=()=>{
+    console.log("sleeps")
+  }
+  
+}
+let oj=new person
+
+class doctor extends person{
+   sleep=()=>{
+    console.log("doesnt sleep on time ")
+  }
+  
+}
+let obj1=new doctor
+obj1.sleep() // retruns doesnt sleep not sleeps as when parent and child both have same function so priority is of child class 
+// this is also called method overriding 
+
+// super keyword ; used to call parent class' s constructor from the child class 
+class surgeon extends person{
+  constructor(age){  // this basically gives me an error so i need to invoke parent class's constructor first 
+    super(age);
+    this.age=age
+  }
+   sleep=()=>{
+    console.log("doesnt sleep on time ")
+  }
+  
+}
+let  obj2=new surgeon(56)
+
+
