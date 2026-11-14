@@ -12,10 +12,6 @@ Here is how my `oops` folder is organized inside my `JS` repository:
 oops/
 ├── Notes/
 │   └── README.md       # This complete OOP learning notebook
-└── practice/
-    ├── README.md       # Review and overview of my practice questions
-    └── practice.js     # Solutions to my 2 OOP practice questions
-```
 
 ---
 
